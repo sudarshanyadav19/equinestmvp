@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plans | Equinest</title>
+  <style>
+    body {
+      background: #0b0b0b;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .box {
+      background: black;
+      border: 2px solid purple;
+      border-radius: 12px;
+      padding: 25px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .price {
+      color: #ff2c2c;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    ul {
+      margin-top: 15px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .btn {
+      background: #ff2c2c;
+      border: none;
+      padding: 12px 22px;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Choose Your Plan</h1>
+
+<div class="box">
+  <h2>Starter Plan</h2>
+  <p class="price">₹299</p>
+  <p><strong>In this package you get:</strong></p>
+  <ul>
+    <li>Investment limit up to NPR 100,000</li>
+    <li>Access to all financial statements before investing</li>
+    <li>Online share certificate in 2 hours</li>
+    <li>Physical share certificate within 1 week</li>
+  </ul>
+  <button class="btn" onclick="location.href='login.html'">Buy Now</button>
+</div>
+
+<div class="box">
+  <h2>Angel Plan</h2>
+  <p class="price">₹7,999 / year <span style="color:gray;">(₹12,000)</span></p>
+  <p><strong>In this package you get:</strong></p>
+  <ul>
+    <li>Unlimited investment limit</li>
+    <li>Access to all financial statements</li>
+    <li>Online share certificate in 30 minutes</li>
+    <li>Physical share certificate within 2 days</li>
+  </ul>
+  <button class="btn" onclick="location.href='login.html'">Buy Now</button>
+</div>
+
+<div class="box">
+  <h2>Partner Matching</h2>
+  <p class="price">₹999 / year <span style="color:gray;">(₹1,199)</span></p>
+  <p><strong>In this package you get:</strong></p>
+  <ul>
+    <li>For working professionals investing in SMEs</li>
+    <li>Investment limit up to NPR 100,000</li>
+    <li>View SMEs like book shops, cafes, clothing stores</li>
+    <li>Connect with people building these businesses</li>
+  </ul>
+  <button onclick="buyPartner()">Buy Partner Matching</button>
+
+<script>
+  function buyPartner() {
+    // DEMO PURCHASE
+    localStorage.setItem("partnerAccess", "true");
+    alert("Partner Matching unlocked!");
+    window.location.href = "platform.html";
+  }
+</script>
+
+</div>
+
+<p style="color:gray; text-align:center;">
+  * Demo plans only. No real payments processed.
+</p>
+
+</body>
+</html>

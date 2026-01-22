@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Equinest Platform</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0b0b0b;
+      color: white;
+    }
+    header {
+      background: black;
+      padding: 20px 40px;
+      color: #ff2c2c;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+    .card {
+      background: #111;
+      border-radius: 10px;
+      padding: 15px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .price {
+      color: #ff2c2c;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .stock {
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>Equinest | Marketplace (Demo)</header>
+
+<div class="grid">
+
+  <div class="card" onclick="location.href='company1.html'">
+    <img src="https://picsum.photos/300/200?1">
+    <h3>Himal Retail Pvt Ltd</h3>
+    <p class="price">₹500 / unit</p>
+    <p class="stock">3000 units left</p>
+  </div>
+
+  <div class="card" onclick="location.href='company2.html'">
+    <img src="https://picsum.photos/300/200?2">
+    <h3>NextGen Fintech</h3>
+    <p class="price">₹2,000 / unit</p>
+    <p class="stock">5000 units left</p>
+  </div>
+
+  <div class="card" onclick="location.href='company3.html'">
+    <img src="https://picsum.photos/300/200?3">
+    <h3>Urban Cafe Chain</h3>
+    <p class="price">₹1,000 / unit</p>
+    <p class="stock">1200 units left</p>
+  </div>
+
+  <div class="card" onclick="location.href='company4.html'">
+    <img src="https://picsum.photos/300/200?4">
+    <h3>EduTech Nepal</h3>
+    <p class="price">₹10,000 / unit</p>
+    <p class="stock">800 units left</p>
+  </div>
+
+  <div class="card" onclick="location.href='company5.html'">
+    <img src="https://picsum.photos/300/200?5">
+    <h3>GreenEnergy SME</h3>
+    <p class="price">₹3,000 / unit</p>
+    <p class="stock">2500 units left</p>
+  </div>
+
+</div>
+<button id="partnerBtn" style="display:none;"
+  onclick="location.href='partner.html'">
+  Find Partner Here
+</button>
+
+<script>
+  if (localStorage.getItem("partnerAccess") === "true") {
+    document.getElementById("partnerBtn").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
